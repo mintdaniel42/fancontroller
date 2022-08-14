@@ -37,6 +37,7 @@ class Loop:
     def loop_forever(self):
         try:
             while True:
+                self.fan_manager.get_cpu_temp()
                 if self.fan_manager.current_temp >= MAX_TEMP:
                     GPIO.output(3, True)
                 if self.fan_manager.current_temp <= MIN_TEMP:
