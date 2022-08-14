@@ -49,4 +49,5 @@ class Loop:
 
 # CALL CLASS
 if __name__ == '__main__':
-    Loop()
+    l = Loop()
+    l.loop_forever()
